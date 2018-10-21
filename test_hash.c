@@ -5,10 +5,10 @@ static int hash_class_objc(const char *str);
 static unsigned long long r_str_hash64(const char *s);
 static unsigned int r_str_hash(const char *s);
 static unsigned long sdbm(const char *str);
-static size_t fnv1a_hash(const char* cp);
+static size_t fnv1a_hash(const char *cp);
 
 int
-main()
+main(void)
 {
   int hash;
   unsigned int hash1;
@@ -78,7 +78,7 @@ sdbm(const char *str)
 
 /* Fowler/Noll/Vo (FNV) hash function, variant 1a */
 static size_t
-fnv1a_hash(const char* cp)
+fnv1a_hash(const char *cp)
 {
     size_t hash = 0x811c9dc5;
     while (*cp) {
